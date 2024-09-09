@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato - Gurizada Entertainment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            background-color: #3498db;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #7f8c8d;
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .contract-section {
+            margin-bottom: 30px;
+        }
+
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .signature-area {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .signature-block {
+            width: 100%;
+            max-width: 45%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .signature-line input {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #95a5a6;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contrato de Participação</h1>
+
+        <!-- Seção de descrição sobre o clube e as vantagens -->
+        <div class="description">
+            <p><strong>Gurizada Entertainment</strong> é um clube exclusivo dedicado à criação, leitura e desenvolvimento de HQs e desenhos. Nossa principal história é <strong>Gabriel Its Life</strong>, mas estamos sempre buscando novas ideias e colaborações com criadores e fãs apaixonados como você!</p>
+
+            <p>Ao assinar este contrato, você se torna um membro oficial do nosso clube e terá acesso a várias vantagens, incluindo:</p>
+            <ul>
+                <li>Acesso antecipado a novas HQs e desenhos exclusivos.</li>
+                <li>Participação em concursos de criação, com a chance de ter suas ideias publicadas.</li>
+                <li>Contribuição direta para o desenvolvimento das histórias e personagens.</li>
+            </ul>
+            <p>Junte-se a nós e faça parte de uma comunidade criativa que valoriza o talento e a imaginação. Este contrato garante que todos os direitos e responsabilidades estão claros para ambas as partes.</p>
+        </div>
+
+        <div class="contract-section">
+            <h2>1. Informações do Participante</h2>
+            <p>Nome Completo:</p>
+            <input type="text" id="nome" placeholder="Digite seu nome completo">
+            
+            <p>Data de Nascimento:</p>
+            <input type="date" id="data-nascimento">
+
+            <p>Endereço de E-mail:</p>
+            <input type="text" id="email" placeholder="Digite seu e-mail">
+        </div>
+
+        <div class="contract-section">
+            <h2>2. Termos Gerais</h2>
+            <label>
+                <input type="radio" name="termos-gerais" id="termos-gerais-sim" value="sim">
+                Sim, concordo com os termos gerais
+            </label>
+            <label>
+                <input type="radio" name="termos-gerais" id="termos-gerais-nao" value="nao">
+                Não, não concordo com os termos gerais
+            </label>
+        </div>
+
+        <div class="contract-section">
+            <h2>3. Direitos de Uso</h2>
+            <label>
+                <input type="radio" name="direitos-uso" id="direitos-uso-sim" value="sim">
+                Sim, autorizo a utilização dos meus dados para criação de conteúdo
+            </label>
+            <label>
+                <input type="radio" name="direitos-uso" id="direitos-uso-nao" value="nao">
+                Não, não autorizo a utilização dos meus dados
+            </label>
+        </div>
+
+        <div class="contract-section">
+            <h2>4. Confidencialidade</h2>
+            <label>
+                <input type="radio" name="confidencialidade" id="confidencialidade-sim" value="sim">
+                Sim, aceito que meus dados sejam mantidos sob confidencialidade
+            </label>
+            <label>
+                <input type="radio" name="confidencialidade" id="confidencialidade-nao" value="nao">
+                Não, não aceito os termos de confidencialidade
+            </label>
+        </div>
+
+        <div class="contract-section">
+            <h2>5. Comentários ou Sugestões</h2>
+            <textarea id="comentarios" placeholder="Deixe aqui seus comentários ou sugestões"></textarea>
+        </div>
+
+        <div class="signature-area">
+            <div class="signature-block">
+                <p>Assinatura do Participante</p>
+                <div class="signature-line">
+                    <input type="text" id="assinatura-participante" placeholder="Digite seu nome">
+                </div>
+            </div>
+
+        <button type="button" onclick="salvarDados()">Salvar Contrato</button>
+
+        <div class="footer">
+            <p>Gurizada Entertainment © 2024. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        // Carregar dados do localStorage ao abrir a página
+        window.onload = function() {
+            document.getElementById('nome').value = localStorage.getItem('nome') || '';
+            document.getElementById('data-nascimento').value = localStorage.getItem('dataNascimento') || '';
+            document.getElementById('email').value = localStorage.getItem('email') || '';
+            document.getElementById('comentarios').value = localStorage.getItem('comentarios') || '';
+            document.getElementById('assinatura-participante').value = localStorage.getItem('assinaturaParticipante') || '';
+            document.getElementById('assinatura-representante').value = localStorage.getItem('assinaturaRepresentante') || '';
+        }
+
+        // Salvar dados no localStorage ao clicar no botão
+        function salvarDados() {
+            if (!document.getElementById('termos-gerais-sim').checked || 
+                !document.getElementById('direitos-uso-sim').checked || 
+                !document.getElementById('confidencialidade-sim').checked) {
+                alert('Você deve aceitar todos os termos para prosseguir.');
+                return;
+            }
+
+            localStorage.setItem('nome', document.getElementById('nome').value);
+            localStorage.setItem('dataNascimento', document.getElementById('data-nascimento').value);
+            localStorage.setItem('email', document.getElementById('email').value);
+            localStorage.setItem('comentarios', document.getElementById('comentarios').value);
+            localStorage.setItem('assinaturaParticipante', document.getElementById('assinatura-participante').value);
+            localStorage.setItem('assinaturaRepresentante', document.getElementById('assinatura-representante').value);
+            
+            alert('Dados do contrato foram salvos com sucesso!');
+        }
+    </script>
+
+</body>
+</html>
