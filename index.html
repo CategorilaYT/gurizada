@@ -127,6 +127,42 @@
         button:hover {
             background-color: #2980b9;
         }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px; 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -208,10 +244,28 @@
                 </div>
             </div>
 
+            <!-- Se você tiver uma assinatura do representante, inclua-a aqui -->
+            <!-- <div class="signature-block">
+                <p>Assinatura do Representante</p>
+                <div class="signature-line">
+                    <input type="text" id="assinatura-representante" placeholder="Digite o nome do representante">
+                </div>
+            </div> -->
+        </div>
+
         <button type="button" onclick="salvarDados()">Salvar Contrato</button>
 
         <div class="footer">
             <p>Gurizada Entertainment © 2024. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <p>Dados salvos com sucesso!</p>
+            <button onclick="fecharModal()">Fechar</button>
         </div>
     </div>
 
@@ -223,7 +277,7 @@
             document.getElementById('email').value = localStorage.getItem('email') || '';
             document.getElementById('comentarios').value = localStorage.getItem('comentarios') || '';
             document.getElementById('assinatura-participante').value = localStorage.getItem('assinaturaParticipante') || '';
-            document.getElementById('assinatura-representante').value = localStorage.getItem('assinaturaRepresentante') || '';
+            // document.getElementById('assinatura-representante').value = localStorage.getItem('assinaturaRepresentante') || '';
         }
 
         // Salvar dados no localStorage ao clicar no botão
@@ -240,9 +294,19 @@
             localStorage.setItem('email', document.getElementById('email').value);
             localStorage.setItem('comentarios', document.getElementById('comentarios').value);
             localStorage.setItem('assinaturaParticipante', document.getElementById('assinatura-participante').value);
-            localStorage.setItem('assinaturaRepresentante', document.getElementById('assinatura-representante').value);
+            // localStorage.setItem('assinaturaRepresentante', document.getElementById('assinatura-representante').value);
             
-            alert('Dados do contrato foram salvos com sucesso!');
+            mostrarModal();
+        }
+
+        function mostrarModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        function fecharModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
         }
     </script>
 
